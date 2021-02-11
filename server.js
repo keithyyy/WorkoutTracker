@@ -30,8 +30,13 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
     useUnifiedTopology: true
 })
 
+// Routes
+require("./routes/api-routes")(app)
+require("./routes/html-routes")(app)
+
 
 app.listen(PORT, () => {
     console.log(`App is running on: ${PORT}!`)
 })
+
 
