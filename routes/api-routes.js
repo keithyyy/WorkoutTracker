@@ -6,7 +6,6 @@ module.exports = (app) => {
         db.Workout.find({})
         .then(dbWorkout => {
             res.json(dbWorkout)
-            console.log(dbWorkout);
         })
         .catch(({message}) => {
             console.log(message)

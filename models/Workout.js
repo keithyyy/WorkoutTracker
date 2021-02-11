@@ -7,7 +7,7 @@ const Schema = mongoose.Schema;
 const WorkoutSchema = new Schema({
     day: {
         type: Date,
-        default: Date.now(),
+        default: Date.now,
     },
     exercises: [
         {
@@ -35,13 +35,12 @@ const WorkoutSchema = new Schema({
             // cardio training
             duration: {
                 type: Number,
-                require: true,
-                default: 0
+                required: "Enter how long exercise took",
+                
             },
 
             distance: {
-                type: Number,
-                default: 0
+                type: Number
             },
             
         }
